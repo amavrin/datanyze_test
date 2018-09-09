@@ -1,9 +1,13 @@
 # Datanyze test
 
 ## Description
-3 VM with ubuntu/trusty64 vagrant base box:
+Vagrantfile sets up 3 VM using ubuntu/trusty64 vagrant base box:
 * lb - load balancer (haproxy)
 * web1, web2 - app server (nginx + uwsgi)
+
+Ansible configuration, files and templates under the provisioning/ directory.
+Main playbook is provisioning/main.yml .
+Roles are under provisioning/roles/ .
 
 ## Prerequisites
 * ansible installed
@@ -13,10 +17,10 @@
 
 ## Things to consider
 * using 'public_network' inside virtual box with 192.168.1 network in bridged mode, so be careful with IP addressing
-* using eth0 as bridge interface; if your is different, change it in Vagrantfile
+* using eth0 as bridge interface; if yours is different, change it in Vagrantfile
 
 ## Usage
-* adjust Vagrantfile (lb_address, web_address[1], web_address[2], bridge_if); default is 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
+* adjust Vagrantfile variables lb_address, web_address[1], web_address[2], bridge_if if necessary; default is 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
 * vagrant up
 
 ## Checking
