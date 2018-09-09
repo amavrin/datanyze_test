@@ -12,7 +12,22 @@
   copy:
     src: nginx.default.conf
     dest: /etc/nginx/conf.d/default.conf
+  register: nginx_default_conf
+
+- name: copy nginx config
+  become: true
+  become_user: root
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
   register: nginx_conf
+
+- name: make nginx log dir
+  become: true
+  become_user: root
+  file:
+    name: /var/log/datanyze-logs
+    state: directory
 
 - name: restarting nginx
   become: true
@@ -20,4 +35,11 @@
   service:
     name: nginx
     state: restarted
-  when: wsgi_params_file.changed or nginx_conf.changed
+  when: wsgi_params_file.changed or nginx_conf.changed or nginx_default_conf.changed
+
+- name: setup nginx log rotation
+  become: true
+  become_user: root
+  copy:
+    src: nginx_logrotate
+    dest: /etc/logrotate.d/nginx
