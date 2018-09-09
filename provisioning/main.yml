@@ -4,3 +4,8 @@
     - install_uwsgi
     - deploy_app
     - setup_nginx
+
+- hosts: lb
+  roles:
+    - install_haproxy
+    - setup_haproxy

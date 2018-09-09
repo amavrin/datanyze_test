@@ -1,0 +1,14 @@
+- name: install haproxy
+  become: true
+  become_user: root
+  apt:
+    name: haproxy
+    state: present
+
+- name: modify defaults haproxy file
+  become: true
+  become_user: root
+  lineinfile:
+    name: /etc/default/haproxy
+    regexp: ^ENABLED=.*
+    line: ENABLED=1

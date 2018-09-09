@@ -1,0 +1,16 @@
+- name: install haproxy config file
+  become: true
+  become_user: root
+  template:
+    src: haproxy.j2
+    dest: /etc/haproxy/haproxy.cfg
+  register: haproxy_config_file
+
+- name: restart haproxy
+  become: true
+  become_user: root
+  service:
+    name: haproxy
+    state: restarted
+    enabled: true
+  when: haproxy_config_file.changed
