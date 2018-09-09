@@ -1,0 +1,14 @@
+- name: install uwsgi
+  become: true
+  become_user: root
+  apt:
+    name: uwsgi
+    state: present
+
+
+- name: install python uwsgi plugin
+  become: true
+  become_user: root
+  apt:
+    name: uwsgi-plugin-python
+    state: present
