@@ -18,11 +18,13 @@ Deploy 3 VM:
 * using eth0 as bridge interface; if your is different, make changes in Vagrantfile
 
 ## Usage
-vagrant up
+* adjust Vagrantfile (lb_address, web_address[1], web_address[2], bridge_if)
+* vagrant up
 
 ## Checking
-* point to http://192.168.1.26:8080 to access app on web1
-* point to http://192.168.1.27:8080 to access app on web2
+* point to http://<<lb address>> to access app on web1 (default 192.168.1.25)
+* point to http://<<web1 address>>:8080 to access app on web1 (default 192.168.1.26)
+* point to http://<<web2 address>>:8080 to access app on web2 (default 192.168.1.26)
 
 ## TODOs
 
@@ -30,9 +32,9 @@ vagrant up
 - [x] uwsgi installation
 - [x] nginx installation from nginx repo
 - [x] app deploy
-- [ ] install and configure haproxy load balancer
+- [x] install and configure haproxy load balancer
 - [ ] configure access logs location and rotarion
 - [ ] configure security updates
 ## Other issues
 - [ ] resolve issue with Let's Encrypt SSL Cert not trusted by apt-key module
-- [ ] make IP addresses and network interface parameters in Vagrantfile
+- [x] make IP addresses and network interface parameters in Vagrantfile
