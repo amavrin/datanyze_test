@@ -10,7 +10,7 @@ Deploy 3 VM:
 * virtualbox installed (>5.0)
 * vagrant installed (>2.0)
 
-## Tthings to consider
+## Things to consider
 * using ubuntu/trusty64 vagrant base box
 * using 'public_network' inside virtual box
 * using 192.168.1 network in bridged mode, so be careful with IP addressing
