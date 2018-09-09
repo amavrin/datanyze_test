@@ -33,7 +33,7 @@ Deploy 3 VM:
 - [x] nginx installation from nginx repo
 - [x] app deploy
 - [x] install and configure haproxy load balancer
-- [ ] configure access logs location and rotarion
+- [x] configure access logs location and rotarion
 - [ ] configure security updates
 ## Other issues
 - [ ] resolve issue with Let's Encrypt SSL Cert not trusted by apt-key module
