@@ -16,16 +16,16 @@ Vagrant.configure("2") do |config|
     config.vm.box="ubuntu/trusty64"
   end
 
-  config.vm.define "lb" do |lb|
-    lb.vm.network "public_network", ip: lb_address, bridge: bridge_if
-    lb.vm.hostname = "lb"
-  end
-
   (1..2).each do |i|
     config.vm.define "web#{i}" do |node|
       node.vm.network "public_network", ip: web_address[i], bridge: bridge_if
       node.vm.hostname = "web#{i}"
     end
+  end
+
+  config.vm.define "lb" do |lb|
+    lb.vm.network "public_network", ip: lb_address, bridge: bridge_if
+    lb.vm.hostname = "lb"
   end
 
   config.vm.provision "ansible" do |ansible|
