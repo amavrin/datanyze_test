@@ -20,7 +20,7 @@ Roles are under provisioning/roles/ .
 * using eth0 as bridge interface; if yours is different, change it in Vagrantfile
 
 ## Usage
-* adjust Vagrantfile variables lb_address, web_address[1], web_address[2], bridge_if if necessary; default is 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
+* adjust Vagrantfile variables lb_address, web_address[1], web_address[2], bridge_if if necessary; defaults are 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
 * vagrant up
 
 ## Checking
