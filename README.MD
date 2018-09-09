@@ -33,3 +33,5 @@ vagrant up
 - [ ] install and configure haproxy load balancer
 - [ ] configure access logs location and rotarion
 - [ ] configure security updates
+
+- [ ] resolve issue with Let's Encrypt SSL Cert not trusted by apt-key module
