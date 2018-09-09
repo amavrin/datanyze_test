@@ -1,0 +1,24 @@
+- name: add nging repo key
+  become: true
+  become_user: root
+  apt_key:
+    url: https://nginx.org/keys/nginx_signing.key
+    state: present
+    validate_certs: false
+
+- name: add nginx repos
+  become: true
+  become_user: root
+  blockinfile:
+    name: /etc/apt/sources.list
+    block: |
+      deb http://nginx.org/packages/ubuntu/ trusty nginx
+      deb-src http://nginx.org/packages/ubuntu/ trusty nginx
+
+- name: install nginx package
+  become: true
+  become_user: root
+  apt:
+    name: nginx
+    update_cache: true
+    state: present
