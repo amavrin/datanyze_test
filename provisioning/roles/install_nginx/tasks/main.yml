@@ -1,4 +1,4 @@
-- name: add nging repo key
+- name: add nginx repo key
   become: true
   become_user: root
   apt_key:
