@@ -22,7 +22,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "provision/main.yml"
+    ansible.playbook = "provisioning/main.yml"
+    ansible.groups = {
+      "web" => ["web[1:2]"]
+    }
   end
 
 end
