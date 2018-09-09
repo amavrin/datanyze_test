@@ -33,5 +33,6 @@ vagrant up
 - [ ] install and configure haproxy load balancer
 - [ ] configure access logs location and rotarion
 - [ ] configure security updates
-
+## Other issues
 - [ ] resolve issue with Let's Encrypt SSL Cert not trusted by apt-key module
+- [ ] make IP addresses and network interface parameters in Vagrantfile
