@@ -1,0 +1,6 @@
+- name: copy auto upgrade config
+  become: true
+  become_user: root
+  copy:
+    src: 20auto-upgrades
+    dest: /etc/apt/apt.conf.d/20auto-upgrades

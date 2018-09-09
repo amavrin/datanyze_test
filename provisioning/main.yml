@@ -9,3 +9,7 @@
   roles:
     - install_haproxy
     - setup_haproxy
+
+- hosts: all
+  roles:
+    - setup_unattended_upgrades
