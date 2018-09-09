@@ -22,9 +22,9 @@ Deploy 3 VM:
 * vagrant up
 
 ## Checking
-* point to http://<<lb address>> to access app on web1 (default 192.168.1.25)
-* point to http://<<web1 address>>:8080 to access app on web1 (default 192.168.1.26)
-* point to http://<<web2 address>>:8080 to access app on web2 (default 192.168.1.26)
+* point to http://*lb_address*/ to access app on web1 (default 192.168.1.25)
+* point to http://*web1_address*:8080/ to access app on web1 (default 192.168.1.26)
+* point to http://*web2_address*:8080/ to access app on web2 (default 192.168.1.26)
 
 ## TODOs
 
