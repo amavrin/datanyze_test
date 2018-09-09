@@ -1,0 +1,23 @@
+- name: copy wsgi params file
+  become: true
+  become_user: root
+  copy:
+    src: wsgi_params
+    dest: /etc/nginx
+  register: wsgi_params_file
+
+- name: copy default nginx config
+  become: true
+  become_user: root
+  copy:
+    src: nginx.default.conf
+    dest: /etc/nginx/conf.d/default.conf
+  register: nginx_conf
+
+- name: restarting nginx
+  become: true
+  become_user: root
+  service:
+    name: nginx
+    state: restarted
+  when: wsgi_params_file.changed or nginx_conf.changed

@@ -2,3 +2,5 @@
   roles:
     - install_nginx
     - install_uwsgi
+    - deploy_app
+    - setup_nginx

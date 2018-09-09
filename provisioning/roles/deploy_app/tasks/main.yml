@@ -1,0 +1,33 @@
+- name: copy app script to servers
+  become: true
+  become_user: root
+  copy:
+    src: app.wsgi
+    dest: /var/www/datanyze/
+  register: app_file
+
+- name: configure uwsgi service
+  become: true
+  become_user: root
+  copy:
+    src: datanyze.ini
+    dest: /etc/uwsgi/apps-available/
+  register: app_ini_file
+
+- name: enabling uwsgi app
+  become: true
+  become_user: root
+  file:
+    src: /etc/uwsgi/apps-available/datanyze.ini
+    dest: /etc/uwsgi/apps-enabled/datanyze.ini
+    state: link
+  register: app_enabled_state
+
+- name: restarting uwsgi service
+  become: true
+  become_user: root
+  service:
+    name: uwsgi
+    state: restarted
+    enabled: yes
+  when: app_file.changed or app_ini_file.changed or app_enabled_state.changed
