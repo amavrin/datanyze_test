@@ -1,7 +1,7 @@
 # Datanyze test
 
 ## Description
-Vagrantfile sets up 3 VM using ubuntu/trusty64 vagrant base box:
+Vagrantfile sets up 3 VM using ubuntu/trusty64 (Ubuntu 14.04) vagrant base box:
 * lb - load balancer (haproxy)
 * web1, web2 - app server (nginx + uwsgi)
 
