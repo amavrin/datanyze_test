@@ -13,7 +13,7 @@ Roles are under provisioning/roles/ .
 * ansible installed
 * virtualbox installed
 * vagrant installed
-* Internet connection available
+* Internet connection
 
 ## Things to consider
 * using 'public_network' inside virtual box with 192.168.1 network in bridged mode, so be careful with IP addressing
