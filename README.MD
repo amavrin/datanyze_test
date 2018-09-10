@@ -18,7 +18,7 @@ Roles are under `provisioning/roles/` .
 ## Things to consider
 * using 'public_network' inside virtual box with 192.168.1 network in bridged mode so
   * choose IP for lb, web1 and web2 **on the same subnet as your host's interface**, otherwise VM would not be accessible;
-  * be careful with IP addressing not to make conflicts with existing computers
+  * be careful with IP addressing not to make conflicts with existing IPs in your subnet
 * using eth0 as bridge interface; if yours is different, change it in Vagrantfile
 
 ## Usage
