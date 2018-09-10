@@ -2,8 +2,8 @@
 
 ## Description
 Vagrantfile sets up 3 VM using ubuntu/trusty64 (Ubuntu 14.04) vagrant base box:
-* lb - load balancer (haproxy)
-* web1, web2 - app server (nginx + uwsgi)
+* **lb** - load balancer (haproxy)
+* **web1** and **web2** - app servers (nginx + uwsgi)
 
 Ansible configuration, files and templates are located under the provisioning/ directory.
 Main playbook is provisioning/main.yml .
