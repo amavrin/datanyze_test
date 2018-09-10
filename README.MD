@@ -24,5 +24,5 @@ Roles are under `provisioning/roles/` .
 * execute `vagrant up`
 
 ## Checking
-* point to http://x.x.x.x/ to access app via load balancer (where x.x.x.x is lb's IP, default http://192.168.1.25/ )
-* point to http://y.y.y.y:8080/ to check app on web1/web2 (where y.y.y.y is web1's or web2's IP; defaults are http://192.168.1.26:8080/ for web1, http://192.168.1.27:8080/ for web2)
+* point to http://x.x.x.x/ where x.x.x.x is lb's IP to access app via load balancer (default is http://192.168.1.25/ )
+* point to http://y.y.y.y:8080/ to check app on web1/web2, where y.y.y.y is web1's or web2's IP (defaults are http://192.168.1.26:8080/ for web1 and http://192.168.1.27:8080/ for web2)
