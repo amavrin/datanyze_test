@@ -21,7 +21,7 @@ Roles are under provisioning/roles/ .
 
 ## Usage
 * adjust Vagrantfile variables lb_address, web_address[1], web_address[2], bridge_if if necessary; defaults are 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
-* vagrant up
+* execute `vagrant up`
 
 ## Checking
 * point to http://x.x.x.x/ to access app via load balancer (where x.x.x.x is lb's IP, default 192.168.1.25)
