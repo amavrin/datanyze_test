@@ -17,12 +17,12 @@ Roles are under `provisioning/roles/` .
 
 ## Things to consider
 * using 'public_network' inside virtual box with 192.168.1 network in bridged mode so
-  * choose IP for lb, web1 and web2 **on the same subnet as your host's interface**, otherwise VM would not be accessible
+  * choose IP for lb, web1 and web2 **on the same subnet as your host's interface**, otherwise VM would not be accessible;
   * be careful with IP addressing not to make conflicts with existing computers
 * using eth0 as bridge interface; if yours is different, change it in Vagrantfile
 
 ## Usage
-* adjust Vagrantfile variables `lb_address`, `web_address[1]`, `web_address[2]`, `bridge_if` if necessary; defaults are 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively.
+* adjust Vagrantfile variables `lb_address`, `web_address[1]`, `web_address[2]`, `bridge_if` if necessary; defaults are 192.168.1.25, 192.168.1.26, 192.168.1.27 and "eth0", respectively;
 * execute `vagrant up`
 
 ## Checking
