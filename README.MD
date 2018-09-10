@@ -5,7 +5,7 @@ Vagrantfile sets up 3 VM using ubuntu/trusty64 vagrant base box:
 * lb - load balancer (haproxy)
 * web1, web2 - app server (nginx + uwsgi)
 
-Ansible configuration, files and templates under the provisioning/ directory.
+Ansible configuration, files and templates are located under the provisioning/ directory.
 Main playbook is provisioning/main.yml .
 Roles are under provisioning/roles/ .
 
